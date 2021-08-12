@@ -19,7 +19,11 @@ def tem_duplicatas(arr):
 
     return False
 
+
 resultado = tem_duplicatas(criar_array())
 
+if resultado:
+    print('Tem!')
 
-
+else:
+    print('Não tem!')
