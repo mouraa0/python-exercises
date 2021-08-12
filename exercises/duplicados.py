@@ -1,22 +1,25 @@
 from random import randint
 
-def tem_duplicatas():
-    dicio = dict()
-    numeros = list()
-
+def criar_array():
+    n = []
     
-    for i in range(5):
-        numeros.append(randint(0,1000))
+    for i in range(1000):
+        n.append(randint(1,100))
+    
+    return n
 
-    for i in numeros:
+def tem_duplicatas(arr):
+    dicio = dict()
+    for i in arr:
         if str(i) in dicio:
-            return 'Tem!'
+            return True
         
         else:
             dicio[f'{i}'] = i
 
-    return 'Não tem!'
+    return False
+
+resultado = tem_duplicatas(criar_array())
 
 
-resultado = tem_duplicatas()
-print(resultado)
+
